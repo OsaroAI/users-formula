@@ -3,6 +3,7 @@
 pillar = __pillar__
 
 conf = dict()
+conf.update(pillar['aws'])
 conf.update(pillar['pypi'])
 
 {% for name, user in pillar.get('users', {}).items() if user.absent is not defined or not user.absent %}
