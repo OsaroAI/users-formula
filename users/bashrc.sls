@@ -6,9 +6,10 @@ conf = dict()
 conf.update(pillar['pypi'])
 
 for name, user in pillar.get('users', {}).items():
+   current = salt.user.info(name)
    if user == None:
-       continue
-   home = "/home/%s" % name
+       user = {}
+   home = user.get('home', current.get('home', "/home/%s" % name))
    manage = manage = user.get('manage_bashrc', False)
    bashrc_path = '%s/.bashrc' % home
    if manage:
