@@ -1,10 +1,6 @@
-#!pydsl
-
-pillar = __pillar__
-
-conf = dict()
-conf.update(pillar['aws'])
-conf.update(pillar['pypi'])
+{% from "users/map.jinja" import users with context %}
+include:
+  - users
 
 {% for name, user in pillar.get('users', {}).items() if user.absent is not defined or not user.absent %}
 {%- set current = salt.user.info(name) -%}
@@ -13,16 +9,21 @@ conf.update(pillar['pypi'])
 {%- endif -%}
 {%- set home = user.get('home', current.get('home', "/home/%s" % name)) -%}
 {%- set manage = user.get('manage_bashrc', False) -%}
+{%- if 'prime_group' in user and 'name' in user['prime_group'] %}
+{%- set user_group = user.prime_group.name -%}
+{%- else -%}
+{%- set user_group = name -%}
+{%- endif %}
 {%- if manage -%}
-s1 = state('user %s bashrc' % name)
-s1.file.blockreplace(
-    {{ home }}/.bashrc,
-    source='salt://users/files/bashrc',
-    marker_start='# START osaro managed bashrc zone',
-    marker_end='# END osaro managed bashrc zone',
-    append_if_not_found='True',
-    context=conf,
-    template='jinja'
-)
+users_{{ name }}_user_bashrc:
+  file.managed:
+    - name: {{ home }}/.bashrc
+    - user: {{ name }}
+    - group: {{ user_group }}
+    - mode: 644
+    - template: jinja
+    - source:
+      - salt://users/files/bashrc/{{ name }}/bashrc
+      - salt://users/files/bashrc/bashrc
 {% endif %}
 {% endfor %}
