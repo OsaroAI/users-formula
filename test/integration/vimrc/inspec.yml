@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 ---
-name: default
+name: vimrc
 title: users formula
 maintainer: SaltStack Formulas
 license: Apache-2.0
-summary: Verify that the users formula is setup and configured correctly
+summary: Verify that the `.vimrc` file is configured correctly for specified users
 supports:
   - platform-name: debian
   - platform-name: ubuntu

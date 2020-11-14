@@ -143,7 +143,7 @@ users_{{ name }}_user:
     - gid: {{ user['prime_group']['gid'] }}
     {% elif 'prime_group' in user and 'name' in user['prime_group'] %}
     - gid: {{ user['prime_group']['name'] }}
-    {% else -%}
+    {% elif grains.os != 'MacOS' -%}
     - gid: {{ name }}
     {% endif -%}
     {% if 'fullname' in user %}
@@ -173,7 +173,7 @@ users_{{ name }}_user:
         {% elif grains['kernel'] == 'Linux' and
             user['expire'] > 84006 %}
         {# 2932896 days since epoch equals 9999-12-31 #}
-    - expire: {{ (user['expire'] / 86400) | int}}
+    - expire: {{ (user['expire'] / 86400) | int }}
         {% else %}
     - expire: {{ user['expire'] }}
         {% endif %}
@@ -199,7 +199,7 @@ users_{{ name }}_user:
     {% if 'optional_groups' in user %}
     - optional_groups:
       {% for optional_group in user['optional_groups'] -%}
-      - {{optional_group}}
+      - {{ optional_group }}
       {% endfor %}
     {% endif %}
     - require:
@@ -221,8 +221,8 @@ user_keydir_{{ name }}:
     - user: {{ name }}
     - group: {{ user_group }}
     - makedirs: True
-    - mode: 700
-    - dir_mode: 700
+    - mode: '0700'
+    - dir_mode: '0700'
     - require:
       - user: {{ name }}
       - group: {{ user_group }}
@@ -246,9 +246,9 @@ users_{{ name }}_{{ key_name }}_key:
     - user: {{ name }}
     - group: {{ user_group }}
       {% if key_name.endswith(".pub") %}
-    - mode: 644
+    - mode: '0644'
       {% else %}
-    - mode: 600
+    - mode: '0600'
       {% endif %}
     - show_diff: False
     {%- set key_value = salt['pillar.get']('users:'+name+':ssh_keys:'+_key) %}
@@ -272,7 +272,7 @@ users_authorized_keys_{{ name }}:
     - name: {{ home }}/.ssh/authorized_keys
     - user: {{ name }}
     - group: {{ user_group }}
-    - mode: 600
+    - mode: '0600'
 {% if 'ssh_auth_file' in user %}
     - contents: |
         {% for auth in user.ssh_auth_file -%}
@@ -305,7 +305,7 @@ user_ssh_keys_files_{{ name }}_{{ key_name }}_private_key:
     - name: {{ home }}/.ssh/{{ key_name }}
     - user: {{ name }}
     - group: {{ user_group }}
-    - mode: 600
+    - mode: '0600'
     - show_diff: False
     - contents_pillar: {{ pillar_name }}:{{ key_name }}:privkey
     - require:
@@ -318,7 +318,7 @@ user_ssh_keys_files_{{ name }}_{{ key_name }}_public_key:
     - name: {{ home }}/.ssh/{{ key_name }}.pub
     - user: {{ name }}
     - group: {{ user_group }}
-    - mode: 644
+    - mode: '0644'
     - show_diff: False
     - contents_pillar: {{ pillar_name }}:{{ key_name }}:pubkey
     - require:
@@ -377,7 +377,7 @@ users_ssh_config_{{ name }}:
     - name: {{ home }}/.ssh/config
     - user: {{ name }}
     - group: {{ user_group }}
-    - mode: 640
+    - mode: '0640'
     - contents: |
         # Managed by Saltstack
         # Do Not Edit
@@ -516,7 +516,7 @@ users_googleauth-{{ svc }}-{{ name }}:
     - contents_pillar: 'users:{{ name }}:google_auth:{{ svc }}'
     - user: root
     - group: {{ users.root_group }}
-    - mode: 400
+    - mode: '0400'
     - require:
       - pkg: users_googleauth-package
 {%-     endfor %}
