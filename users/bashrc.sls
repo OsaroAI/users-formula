@@ -11,10 +11,9 @@ for name, user in pillar.get('users', {}).items():
        user = {}
    home = user.get('home', current.get('home', "/home/%s" % name))
    manage = manage = user.get('manage_bashrc', False)
-   bashrc_path = '%s/.bashrc' % home
    if manage:
        s1.file.blockreplace(
-           bashrc_path,
+           {{ home }}/.bashrc,
            source='salt://users/files/bashrc',
            marker_start='# START osaro managed bashrc zone',
            marker_end='# END osaro managed bashrc zone',
