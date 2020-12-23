@@ -13,9 +13,12 @@ This list is sorted by the number of commits per contributor in *descending* ord
    * - Avatar
      - Contributor
      - Contributions
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/10231489?v=4' width='36' height='36' alt='@myii'>`
+     - `@myii <https://github.com/myii>`_
+     - 63
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/1800660?v=4' width='36' height='36' alt='@aboe76'>`
      - `@aboe76 <https://github.com/aboe76>`_
-     - 38
+     - 42
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/1396878?v=4' width='36' height='36' alt='@gravyboat'>`
      - `@gravyboat <https://github.com/gravyboat>`_
      - 30
@@ -30,7 +33,7 @@ This list is sorted by the number of commits per contributor in *descending* ord
      - 13
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/13322818?v=4' width='36' height='36' alt='@noelmcloughlin'>`
      - `@noelmcloughlin <https://github.com/noelmcloughlin>`_
-     - 12
+     - 13
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/287147?v=4' width='36' height='36' alt='@techhat'>`
      - `@techhat <https://github.com/techhat>`_
      - 10
@@ -40,9 +43,6 @@ This list is sorted by the number of commits per contributor in *descending* ord
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/117961?v=4' width='36' height='36' alt='@babilen5'>`
      - `@babilen5 <https://github.com/babilen5>`_
      - 9
-   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/10231489?v=4' width='36' height='36' alt='@myii'>`
-     - `@myii <https://github.com/myii>`_
-     - 8
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/219284?v=4' width='36' height='36' alt='@kossmac'>`
      - `@kossmac <https://github.com/kossmac>`_
      - 7
@@ -130,6 +130,9 @@ This list is sorted by the number of commits per contributor in *descending* ord
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/361167?v=4' width='36' height='36' alt='@eedgar'>`
      - `@eedgar <https://github.com/eedgar>`_
      - 2
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/3012076?v=4' width='36' height='36' alt='@fzipi'>`
+     - `@fzipi <https://github.com/fzipi>`_
+     - 2
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/611471?v=4' width='36' height='36' alt='@duk3luk3'>`
      - `@duk3luk3 <https://github.com/duk3luk3>`_
      - 2
@@ -138,6 +141,9 @@ This list is sorted by the number of commits per contributor in *descending* ord
      - 2
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/2995329?v=4' width='36' height='36' alt='@t0fik'>`
      - `@t0fik <https://github.com/t0fik>`_
+     - 2
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars2.githubusercontent.com/u/12301397?v=4' width='36' height='36' alt='@konstest'>`
+     - `@konstest <https://github.com/konstest>`_
      - 2
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/7139195?v=4' width='36' height='36' alt='@xenophonf'>`
      - `@xenophonf <https://github.com/xenophonf>`_
@@ -187,11 +193,11 @@ This list is sorted by the number of commits per contributor in *descending* ord
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/234554?v=4' width='36' height='36' alt='@diegows'>`
      - `@diegows <https://github.com/diegows>`_
      - 1
-   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars3.githubusercontent.com/u/6268179?v=4' width='36' height='36' alt='@Takios'>`
-     - `@Takios <https://github.com/Takios>`_
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars3.githubusercontent.com/u/52996?v=4' width='36' height='36' alt='@daks'>`
+     - `@daks <https://github.com/daks>`_
      - 1
-   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/591158?v=4' width='36' height='36' alt='@garethhowell'>`
-     - `@garethhowell <https://github.com/garethhowell>`_
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/63707175?v=4' width='36' height='36' alt='@mitt-fn'>`
+     - `@mitt-fn <https://github.com/mitt-fn>`_
      - 1
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/129202?v=4' width='36' height='36' alt='@cornmander'>`
      - `@cornmander <https://github.com/cornmander>`_
@@ -253,6 +259,9 @@ This list is sorted by the number of commits per contributor in *descending* ord
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars0.githubusercontent.com/u/16322427?v=4' width='36' height='36' alt='@adnanJP'>`
      - `@adnanJP <https://github.com/adnanJP>`_
      - 1
+   * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars1.githubusercontent.com/u/15616818?v=4' width='36' height='36' alt='@jasonious'>`
+     - `@jasonious <https://github.com/jasonious>`_
+     - 1
    * - :raw-html-m2r:`<img class='float-left rounded-1' src='https://avatars3.githubusercontent.com/u/10122937?v=4' width='36' height='36' alt='@ketzacoatl'>`
      - `@ketzacoatl <https://github.com/ketzacoatl>`_
      - 1
@@ -266,4 +275,4 @@ This list is sorted by the number of commits per contributor in *descending* ord
 
 ----
 
-Auto-generated by a `forked version <https://github.com/myii/maintainer>`_ of `gaocegege/maintainer <https://github.com/gaocegege/maintainer>`_ on 2019-08-17.
+Auto-generated by a `forked version <https://github.com/myii/maintainer>`_ of `gaocegege/maintainer <https://github.com/gaocegege/maintainer>`_ on 2020-10-02.

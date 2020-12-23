@@ -1,1 +1,0 @@
-export PIP_INDEX_URL="https://{{ access_key }}:{{ secret_key }}@pypi.osaro.io/repo/default"

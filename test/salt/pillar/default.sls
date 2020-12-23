@@ -2,7 +2,6 @@
 # vim: ft=yaml
 ---
 users-formula:
-  use_vim_formula: true
   lookup:  # override the defauls in map.jinja
     root_group: root
 
@@ -17,8 +16,10 @@ groups:
   niceguys:
     gid: 4242
     system: false
-    addusers: root
-    delusers: toor
+    addusers:
+      - root
+    delusers:
+      - toor
   ssl-cert:
     system: true
     members:
